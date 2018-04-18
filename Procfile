@@ -1,1 +1,1 @@
-web: gunicorn irish_craft_market.wsgi:applictaion
+web: gunicorn irish_craft_market.wsgi:application
