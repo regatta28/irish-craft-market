@@ -1,1 +1,0 @@
-web: python irish_craft_market.wsgi:application
