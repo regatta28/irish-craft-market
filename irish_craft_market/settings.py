@@ -165,6 +165,9 @@ DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
 
 STATICFILES_STORAGE = 'custom_storages.StaticStorage'
 
+STRIPE_PUBLISHABLE = os.getenv('STRIPE_PUBLISHABLE')
+STRIPE_SECRET = os.getenv('STRIPE_SECRET')
+
 MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
 
 
