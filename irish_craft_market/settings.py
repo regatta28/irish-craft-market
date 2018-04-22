@@ -162,6 +162,7 @@ MEDIA_URL = '/media/'
 MEDIAFILES_LOCATION = 'media'
 DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
 
+
 STATICFILES_STORAGE = 'custom_storages.StaticStorage'
 
 MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
