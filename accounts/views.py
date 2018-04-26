@@ -3,6 +3,8 @@ from django.contrib import auth, messages
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from accounts.forms import UserLoginForm, UserRegistrationForm
+from products.models import Product
+from django.utils import timezone
 # Create your views here.
 
 def index(request):
@@ -10,6 +12,11 @@ def index(request):
     return render(request, 'index.html')
     
 @login_required
+
+
+def profile(request):
+    products = Product.objects.all().order_by('-created_date')
+    return render(request, "profile.html", {'products': products})
     
 def logout(request):
     """Log the User Out"""
@@ -66,7 +73,7 @@ def registration(request):
 
 def user_profile(request):
     """The User's profile page"""
-    user = User.objects.get(email=request.user.email)
+    user = User.objects.filter(email=request.user.email)
     return render(request, 'profile.html', {"profile": user})
 
 

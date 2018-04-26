@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load static from staticfiles %}
+{% load bootstrap_tags %}
+{% block content %}
+    <div class="container">
+
+        <!-- Page Heading/Breadcrumbs -->
+        <h1>Browse ads</h1>
+
+        <!-- Content Row -->
+        <div class="row">
+            <div class="col-md-4">
+
+                <p class="browseads advertiserdetails"><strong>Advertiser: </strong>{{ product.advertiser.username }}</p>
+                <hr>
+            </div>
+            <div class="col-md-8 borderleft">
+                <h3>{{ product.item }}</h3>
+                {% if product.image %}
+                    <img class="imageplaceholder" src="{{ MEDIA_URL }}{{ product.image }}"
+                         style="width:300px; height: 266px; background-color: #12ABB2; color: #ffffff;">
+                {% else %}
+                    <div class="imageplaceholder">No images available</div>
+                {% endif %}
+                <p class="browseads"><strong>Description: </strong>{{ product.description }}</p>
+                <p class="browseads"><strong>Price: </strong> &euro;{{ product.price }}</p>
+                <!--<p class="browseads"><strong>Views: </strong> {{ advert.views }}</p>-->
+                <hr>
+                <p>
+                <button class="btn btn-success" onclick="location.href='{% url 'products' %}'">
+                        Back to all ads
+                    </button>
+                    <button class="btn btn-success" onclick="location.href='{% url 'add_to_cart' product.id %}'">
+                        Add to cart
+                    </button>
+
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- End of Content -->
+    </div>
+{% endblock %}
+
+
+
+
+
+
+
+

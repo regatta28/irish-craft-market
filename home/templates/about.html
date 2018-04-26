@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+{% load static from staticfiles %}
+
+{% block content %}
+<div class="container">
+    <!-- Page Heading/Breadcrumbs -->
+    <h1>About Irish Craft Market</h1>
+
+    <!-- Intro Content -->
+    <div class="container">
+        <div class="col-lg-12">
+            <h4>Irish Craft Market</h4>
+            <h3>Irish Craft Market is an online shop for people around the globe wanting to purchase handmade Irish Crafts from all around Ireland.</h3>
+             <h4>How you can join...</h4>
+            <p>Its very simple. Register today to start posting your handmade Irish products.</p>
+        </div>
+    </div>
+    <!-- /.row -->
+
+    <!-- Team Members -->
+    <hr>
+    <h2>Products</h2>
+
+    <div class="row">
+        <div class="contactcard col-lg-4 col-md-4 col-sm-12">
+            <div class="card h-100 text-center">
+                <img class="card-img-top img-fluid" src="{% static 'img/cladaghring.jpg' %}" alt="">
+                <div class="card-block">
+                    <h3 class="card-title">Jewellery | Fashion</h3>
+                    <p class="card-text">Handcrafted timeless fashion. Ireland is famous for its unique and beautiful handcrafted jewellery and clothes</p>
+                </div>
+                <div class="card-footer">
+                    <div class="card-footer">
+                        <a href="{% url 'products' %}" class="btn">Browse Crafts</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="contactcard col-lg-4 col-md-4 col-sm-12">
+            <div class="card h-100 text-center">
+                <img class="card-img-top img-fluid" src="{% static 'img/tableware.jpg' %}" alt="">
+                <div class="card-block">
+                    <h3 class="card-title">Textiles and Tableware</h3>
+                    <p class="card-text">Beautiful Handcrafted Textiles and Tableware. Browse our beautiful selection of handcrafted and high quality textiles and tableware</p>
+                </div>
+                    <div class="card-footer">
+                        <a href="{% url 'registration' %}" class="btn">Register here to start shopping!</a>
+                    </div>
+            </div>
+        </div>
+        <div class="contactcard col-lg-4 col-md-4 col-sm-12" >
+            <div class="card h-100 text-center">
+                <img class="card-img-top img-fluid" src='{% static "img/jams.jpg" %}' alt="">
+                <div class="card-block">
+                    <h3 class="card-title">Food | Beverages</h3>
+                    <p class="card-text">Delicious food and drinks lovingly crafted for all tastes. Jams, chutneys, Irish cream and whiskey, biscuits, cakes and much much more ...
+                    </p>
+                </div>
+                    <div class="card-footer">
+                        <a href="{% url 'products' %}" class="btn">Shop now</a>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- /.container -->
+{% endblock %}

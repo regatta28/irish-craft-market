@@ -1,19 +1,91 @@
 form {
     width: 50%;
 }
+#postForm {
+    background-color:lightgrey;
+    border: solid black 2px;
+    padding: 20px;
+    height: 400px;  
+}
+body { 
+  padding-top: 20px;
+  background: url('/static/img/ireland.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  opacity: 0.9;
+  height:1000px;
+}
+.col-lg-12 {
+    height:600px;
+}
+/*.col-lg-4 {*/
+/*    border:solid #ededed 1px;*/
+/*}*/
+.card-text {
+    color: white;
+    font-family:'Slabo 27px', serif;
+}
+.card-header {
+    color:white;
+    font-family:'Slabo 27px', serif; 
+}
+.navbar-brand {
+    font-family: 'Slabo 27px', serif;
+    font-size: 50px;
+    padding: 20px;
+}
+.container {
+    width: 100%;
+    margin-bottom: 10px;
+ 
+}
+.row {
+    width: 100%;
+}
+h2 {
+    text-align: center;
+    color: white;
+}
+h1, h3, h4 {
+    color: white;
+}
+p {
+    color: white;
+    font-size: 15px;
+}
 body {
     font-family: Arial;
-    padding-top: 100px;
+    padding-top: 50px;
 }
 footer {
     margin-top: 40px;
     padding-top: 20px;
     padding-bottom: 40px;
     border-top: 1px solid #ededed;
-    color:#A9A9A9;
+    color:black;
+    text-align: center;
+    background-color: white;
 }
 footer p {
-     font-size: 50px; 
+    font-size: 15px;
+    color:grey;
+}
+
+div.col-lg-12 {
+    height: 300px;
+    text-align: center;
+    color:white;
+}
+div.col-lg-12 h1 {
+    padding-top: 40px;
+    font-size: 40px;
+    color: white;
+}
+div.col-lg-12 p {
+    padding: 20px;
+    font-size:20px;
 }
 .icon-bar {
     background-color: #fff;
@@ -59,6 +131,29 @@ caption p {
 }
 .product-description {
     min-height: 40px;
+}
+.btn {
+    background-color: #998100;
+    color: #165111;
+}
+@media screen and (max-width: 768px) {
+    .navbar-brand {
+    font-size: 25px;
+}
+    div.col-lg-12 h1 {
+    padding-top: 20px;
+    font-size: 25px;
+    color: white;
+    }
+    .container {
+        display: block;
+        margin-top: 5px;;
+        padding-top: 5px;
+    }
+    .container #homepageBackground {
+        display: block;
+        width: 100%;
+    }
 }
 
 

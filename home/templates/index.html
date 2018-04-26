@@ -1,4 +1,51 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
+{% load static from staticfiles %}
 
 {% block content %}
+    <header>
+        <div></div>
+    </header>
+
+    <!-- Page Content -->
+    <div class="container" style="background-image: url({% static 'img/ireland.jpg' %})" alt="">
+        <h1><span id="homepageheader">Irish Craft Market |</span> The best of Irish Craftmanship to order online</h1>
+
+        <!-- Marketing Icons Section -->
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="card h-100">
+                    <h4 class="card-header">Artisanal Crafts</h4>
+                    <div class="card-block">
+                        <p class="card-text">Browse Artisans and their crafts from every corner of Ireland.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="{% url 'products' %}" class="btn btn-success">Browse Crafts</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card h-100">
+                    <h4 class="card-header">Post your Product</h4>
+                    <div class="card-block">
+                        <p class="card-text">Are you an artisan who would like to post your products on Irish-Craft-Market?</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="{% url 'registration' %}" class="btn btn-success">Register here to start selling!</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card h-100">
+                    <h4 class="card-header">Learn how Irish-Craft-Market works</h4>
+                    <div class="card-block">
+                        <p class="card-text">Read all about how we got started and how we can help you to sell your products worldwide.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="{% url 'about' %}" class="btn btn-success">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.row -->
+    </div>
 {% endblock %}
