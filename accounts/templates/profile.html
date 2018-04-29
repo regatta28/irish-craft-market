@@ -1,40 +1,41 @@
 {% extends 'base.html' %}
 {% load static from staticfiles %}
-{% block page_title %}{{ user }}'s Profile{% endblock %}
-
-{% block page_heading %}{{ user }}'s Profile{% endblock %}
-
+{% load gravatar %}
 {% block content %}
-    <div class="container">
+    <div class="container whiteContainer">
 
         <!-- Page Heading/Breadcrumbs -->
         <h1>My Profile</h1>
 
-
         <!-- Content Row -->
         <div class="row">
-
+            <div class="col-lg-3 col-md-4 col-sm-12">
+                <a class="story-img" href="#">
+                    <img src="{% gravatar_url user.email %}"
+                         style="width:200px; height: 200px; background-color: #12ABB2; color: #ffffff;"
+                         class="img-circle">
+                </a>
+            </div>
             <div class="col-lg-9 col-md-8 col-sm-12 borderleft">
                 <p class="browseads advertiserdetails"><strong>Username: </strong>{{ user.username }}</p>
                 <p class="browseads advertiserdetails"><strong>Email address: </strong>{{ user.email }}</p>
-
-
+                <p class="browseads"><a href="{% url 'view_cart' %}"><i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                    Go to my cart</a></p>
+                <p class="browseads"><a href="{% url 'password_reset' %}"><i class="fa fa-lock" aria-hidden="true"></i>
+                    Reset my password</a></p>
                 <p class="myadverts"><strong>My listed adverts:</strong></p>
                 {% for product in products %}
                     {% if user.id == product.advertiser_id %}
-                        <p class="browseads"><strong>Advert title: </strong>{{ product.item }}</p>
-                        <div class='product' style='background-image: url("{{ MEDIA_URL }}{{ item.product.image }}")'></div>
-                        <div class='caption'>
-                            <h3>{{ item.product.name }}</h3>
-                            <p class='product-description'>{{ item.product.description }}</p>
-                            <p>{{ item.product.price }}</p>
-                            <p>
-                         </div>
-                        <button class="btn btn-success" onclick="location.href='{% url 'edit_ad' product.id %}'">Edit
+                        {% if product.image %}
+                            <img class="imageplaceholder" src="{{ MEDIA_URL }}{{ product.image }}" style="width:250px; height: 266px; background-color: #12ABB2; color: #ffffff;">
+                        {% endif %}
+                        <p class="browseads"><strong>Advert title: </strong>{{ product.name }}</p>
+                        <p class="browseads"><strong>Price: </strong>&euro;{{ product.price }}</p>
+                        <button class="btn btn-success" onclick="location.href='{% url 'edit_product' product.id %}'">Edit
                             ad
                         </button>
                         <hr>
-           
+                        
                     {% endif %}
                 {% endfor %}
             </div>
@@ -42,6 +43,3 @@
         <!-- End of Content -->
     </div>
 {% endblock %}
-
-
-

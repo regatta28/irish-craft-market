@@ -4,7 +4,6 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from accounts.forms import UserLoginForm, UserRegistrationForm
 from products.models import Product
-from django.utils import timezone
 # Create your views here.
 
 def index(request):
@@ -13,10 +12,9 @@ def index(request):
     
 @login_required
 
-
 def profile(request):
     products = Product.objects.all().order_by('-created_date')
-    return render(request, "profile.html", {'products': products})
+    return render(request, "profile.html", {'products':  products})
     
 def logout(request):
     """Log the User Out"""
@@ -32,8 +30,7 @@ def login(request):
         login_form = UserLoginForm(request.POST)
         
         if login_form.is_valid():
-            user = auth.authenticate(username=request.POST['username'],
-                                     password=request.POST['password'])
+            user = auth.authenticate(username=request.POST['username'], password=request.POST['password'])
 
             if user:
                 auth.login(user=user, request=request)
@@ -46,7 +43,7 @@ def login(request):
     return render(request, "login.html", {"login_form": login_form})
     
 
-def registration(request):
+def register(request):
     """Render the registration page"""
     if request.user.is_authenticated:
         return redirect(reverse('index'))
@@ -73,18 +70,5 @@ def registration(request):
 
 def user_profile(request):
     """The User's profile page"""
-    user = User.objects.filter(email=request.user.email)
+    user = User.objects.get(email=request.user.email)
     return render(request, 'profile.html', {"profile": user})
-
-
-
-
-
-
-
-
-
-
-
-
-

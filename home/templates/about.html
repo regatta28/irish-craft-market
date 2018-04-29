@@ -4,21 +4,25 @@
 {% block content %}
 <div class="container">
     <!-- Page Heading/Breadcrumbs -->
-    <h1>About Irish Craft Market</h1>
+    <h1>About Us</h1>
 
     <!-- Intro Content -->
     <div class="container">
         <div class="col-lg-12">
-            <h4>Irish Craft Market</h4>
+            <h2>Irish Craft Market</h2>
             <h3>Irish Craft Market is an online shop for people around the globe wanting to purchase handmade Irish Crafts from all around Ireland.</h3>
              <h4>How you can join...</h4>
-            <p>Its very simple. Register today to start posting your handmade Irish products.</p>
+            <h4>Its very simple. Register today to start posting your handmade Irish products.</h4>
+
         </div>
+    </div>
+    <div class="card-footer centerBtn">
+        <a href="{% url 'register' %}" class="btn">Register here to Post Your Produce!</a>
     </div>
     <!-- /.row -->
 
     <!-- Team Members -->
-    <hr>
+
     <h2>Products</h2>
 
     <div class="row">
@@ -44,7 +48,7 @@
                     <p class="card-text">Beautiful Handcrafted Textiles and Tableware. Browse our beautiful selection of handcrafted and high quality textiles and tableware</p>
                 </div>
                     <div class="card-footer">
-                        <a href="{% url 'registration' %}" class="btn">Register here to start shopping!</a>
+                        <a href="{% url 'register' %}" class="btn">Register here to start shopping!</a>
                     </div>
             </div>
         </div>

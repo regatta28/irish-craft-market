@@ -1,11 +1,37 @@
+/**FORMS**/
+
 form {
     width: 50%;
+}
+#payment-form {
+    width: 100%;
+    background-color: lightgrey;
 }
 #postForm {
     background-color:lightgrey;
     border: solid black 2px;
     padding: 20px;
-    height: 400px;  
+    height: 700px; 
+    width: 100%;
+}
+.accountform {
+    padding-top: 20px;
+}
+
+/**GENERAL**/
+html {
+    position:relative;
+}
+
+#footer {
+    text-align: center;
+    background-color: lightgray;
+    margin-top: 50px;
+    height: 50px;
+    position:absolute;
+    bottom:0;
+    width:100%;
+    padding-top: 10px;
 }
 body { 
   padding-top: 20px;
@@ -15,14 +41,88 @@ body {
   -o-background-size: cover;
   background-size: cover;
   opacity: 0.9;
-  height:1000px;
+  font-family: Arial;
+  padding-top: 50px;
 }
-.col-lg-12 {
-    height:600px;
+#cartProducts {
+    background-color: lightgrey;
+    margin-left: 5px;
 }
-/*.col-lg-4 {*/
-/*    border:solid #ededed 1px;*/
-/*}*/
+.total {
+    color: white;
+}
+.whiteContainer {
+    background-color: lightgrey;
+    border: solid 1px white;
+    width:90%;
+    margin: auto;
+
+}
+.large {
+    width:100%;
+    padding-left: 20px;
+    background-color: lightgrey;
+    height: 1500px;
+}
+
+.postadcontainer {
+    height: 1000px;
+}
+
+a{
+    color: rgb(61,170,0);
+    text-decoration: none;
+}
+
+a:hover, a:active{
+    color: #002B00;
+    text-decoration: none;
+}
+
+.card-header{
+    margin-top: 0px;
+}
+
+
+div.card-footer{
+    background-color: transparent;
+    border-top: none;
+    margin-top: 10px;
+}
+
+.centerBtn a{
+    width: 100%;
+}
+
+
+/**DIVS**/
+
+.row {
+    width: 100%;
+    
+}
+.row.row-flex {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+.row {
+    width: 80%;
+    margin: auto;
+}
+
+
+
+div.col-lg-12 {
+    height: 200px;
+    text-align: center;
+    color:white;
+}
+
+/**CARDS**/
+
 .card-text {
     color: white;
     font-family:'Slabo 27px', serif;
@@ -31,52 +131,32 @@ body {
     color:white;
     font-family:'Slabo 27px', serif; 
 }
+
+/***NAVBAR**/
+
 .navbar-brand {
     font-family: 'Slabo 27px', serif;
     font-size: 50px;
     padding: 20px;
 }
-.container {
-    width: 100%;
-    margin-bottom: 10px;
- 
+
+.icon-bar {
+    background-color: #fff;
 }
-.row {
-    width: 100%;
-}
+
+/**HEADERS & PARAGRAPHS**/
+
 h2 {
     text-align: center;
     color: white;
 }
 h1, h3, h4 {
     color: white;
+    text-align: center;
 }
 p {
-    color: white;
+    color: black;
     font-size: 15px;
-}
-body {
-    font-family: Arial;
-    padding-top: 50px;
-}
-footer {
-    margin-top: 40px;
-    padding-top: 20px;
-    padding-bottom: 40px;
-    border-top: 1px solid #ededed;
-    color:black;
-    text-align: center;
-    background-color: white;
-}
-footer p {
-    font-size: 15px;
-    color:grey;
-}
-
-div.col-lg-12 {
-    height: 300px;
-    text-align: center;
-    color:white;
 }
 div.col-lg-12 h1 {
     padding-top: 40px;
@@ -87,12 +167,9 @@ div.col-lg-12 p {
     padding: 20px;
     font-size:20px;
 }
-.icon-bar {
-    background-color: #fff;
-}
-.accountform {
-    padding-top: 20px;
-}
+
+/**BUTTONS**/
+
 .badge {
     padding-left: 9px;
     padding-right: 9px;
@@ -104,46 +181,113 @@ div.col-lg-12 p {
 .badge-warning[href] {
     background-color: #c67605;
 }
-
+.btn {
+    background-color: #998100;
+    color: white;
+}
+.regForm {
+    width: 60%;
+    margin: auto;
+}
+.regFormPara {
+    color:white;
+    width: 50%;
+    margin:auto;
+    font-size: 25px;
+}
+.help-block {
+    color:white;
+}
+#regForm label {
+    color:white;
+}
 .product {
     background-size: contain;
     background-position: center center;
     background-repeat: no-repeat;
-    width: 150px;
-    height: 150px;
-    margin: 0 auto;
+    width: 200px;
+    height: 200px;
+    margin: 10px auto;
+    padding: 20px;
+    background-color: none;
+
 }
 caption p {
     word-wrap: break-word;
 }
-.row.row-flex {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 30px;
-}
+
 .panel-default {
     border-color: transparent;
     padding: 0 10px;
 }
 .panel-body {
     height: 100%;
-    border: 1px solid #ddd;
 }
 .product-description {
     min-height: 40px;
 }
-.btn {
-    background-color: #998100;
-    color: #165111;
+
+
+/**Ads**/
+.borderleft{
+    border-left: 3px solid #eaf6ea;
 }
+
+.myadverts {
+    margin-top: 50px;
+    color: rgb(61,170,0);
+    margin-bottom: 8px;
+}
+
+.row.adlistitem {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+.row {
+    margin-bottom: 100px;
+}
+
+.browseads{
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+/*#form-group {*/
+/*    background-color: lightgrey;*/
+/*}*/
+
+/**footer**/
+footer {
+    margin-top: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top: 1px solid #ededed;
+    background-color: white;
+    text-align: center;
+}
+footer p {
+    color: black;
+}
+
 @media screen and (max-width: 768px) {
     .navbar-brand {
-    font-size: 25px;
-}
+        font-size: 25px;
+    }
     div.col-lg-12 h1 {
     padding-top: 20px;
-    font-size: 25px;
+    font-size: 15px;
     color: white;
+    }
+    h1, h2 {
+        font-size: 18px;
+    }
+
+    h3, h4, p {
+        font-size: 15px;
+    }
+    div.col-lg-12 p {
+        padding: 10px;
+        font-size:10px;
     }
     .container {
         display: block;
@@ -154,6 +298,10 @@ caption p {
         display: block;
         width: 100%;
     }
+    /*#payment-form {*/
+    /*width: 100%;*/
+    /*background-color: lightgrey;*/
+    /*}*/
 }
 
 

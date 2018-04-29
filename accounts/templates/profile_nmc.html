@@ -1,22 +1,21 @@
 {% extends 'base.html' %}
 {% load static from staticfiles %}
-{% load gravatar %}
 {% load bootstrap_tags %}
 {% block content %}
-    <div class="whiteContainer">
+    <div class="container">
 
         <!-- Page Heading/Breadcrumbs -->
         <h1>Browse Products</h1>
 
         <!-- Content Row -->
         <div class="row">
-        
+            <div class="col-lg-12 col-md-12 col-sm-12">
                 {% for product in products %}
                     <div class="row adlistitem">
                         <hr>
                         <div class="col-lg-4 col-md-6 col-sm-12">
                             {% if product.image %}
-                                <img class="imageplaceholder" src="{{ MEDIA_URL }}{{ product.image }}" style="width:250px; height: 266px; background-color: #12ABB2; color: #ffffff;">
+                                <img class="imageplaceholder" src="{{ MEDIA_URL }}{{ product.image }}" style="width:300px; height: 266px; background-color: #12ABB2; color: #ffffff;">
                             {% else %}
                                 <div class="imageplaceholder">No images available</div>
                             {% endif %}
@@ -29,24 +28,17 @@
                                 <hr>
                                 <p><button class="btn btn-success" onclick="location.href='{% url 'productdetails' product.id %}'">View ad
                                         </button>
-                                <form method='post' action='{% url 'add_to_cart' product.id %}'>
-                                {% csrf_token %}
-                                    <div class='input-group'>
-                                        <input name='quantity' type='number' min='1' max='999' class='form-control' placeholder='Quantity'>
-                                        <span class='input-group-btn'>
-                                        <button class='btn btn-success' type='submit'>Add</button>
-                                        </span>
-                                    </div>
-                                </form>
+                                <button class="btn btn-success" onclick="location.href='{% url 'add_to_cart' product.id %}'">Add to cart
+                                        </button>
                                 </p>
                             </div>
                         </div>
-                   
                     </div>
-                
+                    <hr>
                 {% endfor %}
+
             </div>
-        
+        </div>
         <!-- End of Content -->
     </div>
 {% endblock %}
