@@ -1,5 +1,58 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
+{% load static from staticfiles %}
 
-{% block page_title %}Home Page{% endblock %}
+{% block content %}
+    <header>
+        <div></div>
+    </header>
 
-{% block page_heading %}Home{% endblock %}
+    <!-- Page Content -->
+    <div class="container-fluid">
+        
+            <div class="col-lg-12">
+                <h1>Irish Craft Market <br><br> The best of Irish Craftmanship online</h1>
+            </div>
+        
+        <!-- Marketing Icons Section -->
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="card h-100 text-center">
+                    <h4 class="card-header">Artisanal Crafts</h4>
+                    <img class="card-img-top img-fluid" src="{% static 'img/craftwoman.jpg' %}" alt="">
+                    <div class="card-block">
+                        <p class="card-text">Browse Artisans and their crafts from every corner of Ireland.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="{% url 'products' %}" class="btn btn-success">Browse Crafts</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card h-100 text-center">
+                    <h4 class="card-header">Register today for great deals</h4>
+                    <img class="card-img-top img-fluid" src="{% static 'img/clothes.jpg' %}" alt="">
+                    <div class="card-block">
+                        <p class="card-text">Simple and quick registration to become a member and avail of the best deals.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="{% url 'register' %} %}" class="btn btn-success">Register here to start selling!</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card h-100 text-center">
+                    <h4 class="card-header">About Irish Craft Market</h4>
+                    <img class="card-img-top img-fluid" src="{% static 'img/gaeltacht.jpg' %}" alt="">
+                    <div class="card-block">
+                        <p class="card-text">Read all about how we got started and how we can help you to sell your products worldwide.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="{% url 'about' %}" class="btn btn-success">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.row -->
+    </div>
+{% endblock %}
+
