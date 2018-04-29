@@ -1,5 +1,9 @@
 from django.shortcuts import render, get_object_or_404, redirect
+<<<<<<< HEAD
 from .models import Product
+=======
+from products.models import Product
+>>>>>>> d9b3d8c3550826e6b99d736146926b7aa5748717
 from django.contrib.auth.decorators import login_required
 from django.utils import timezone
 from .forms import ProductPostForm
