@@ -7,3 +7,4 @@ urlpatterns = [
     url(r'^new/$', new_product, name='new_product'),
     url(r'^(?P<id>\d+)/edit$', edit_product, name='edit_product'),
 ]
+
