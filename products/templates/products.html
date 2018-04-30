@@ -25,7 +25,7 @@
                             <h3>{{ product.item }}</h3>
                             <div>
                                 <p class="browseads"><strong>Price: </strong> &euro;{{ product.price }}</p>
-         
+                                <p class="browseads"><strong>Description: </strong>{{ product.description }}</p>
                                 <hr>
                                 <p><button class="btn btn-success" onclick="location.href='{% url 'productdetails' product.id %}'">View ad
                                         </button>
