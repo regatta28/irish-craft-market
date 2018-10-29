@@ -1,4 +1,4 @@
-Django==1.11
+Django==1.11.15
 chardet==2.2.1
 colorama==0.2.5
 html5lib==0.999
