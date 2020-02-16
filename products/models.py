@@ -3,7 +3,7 @@ from django.utils import timezone
 from django.contrib.auth.models import User
 
 class Product(models.Model):
-    advertiser = models.ForeignKey('auth.User')
+    advertiser = models.ForeignKey('auth.User', on_delete=models.CASCADE)
     category = models.CharField(max_length=200, default='')
     item = models.CharField(max_length=200, default='')
     name = models.CharField(max_length=254, default='')
